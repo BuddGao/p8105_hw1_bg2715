@@ -51,6 +51,7 @@ data("penguins", package = "palmerpenguins")
 ```
 Show the information of 'penguins' dataset. 
 ```{r}
+names(penguins)
 print(penguins)
 nrow(penguins)
 ncol(penguins)
