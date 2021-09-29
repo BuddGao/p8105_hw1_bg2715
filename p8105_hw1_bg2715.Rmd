@@ -10,6 +10,7 @@ My solution of HW1 is shown below.
 library(tidyverse)
 ```
 
+
 ## Problem 1
 
 Create the data frame.
@@ -22,6 +23,24 @@ p1_df = tibble(
   )
 ```
 
+Find the mean of each variable.
+```{r}
+mean(pull(p1_df, sample))
+mean(pull(p1_df, sp_gt_0))
+mean(pull(p1_df, char_vec))
+mean(pull(p1_df, fact_vec))
+```
+
+I can compute the mean of the sample and logical vector. But it doesn't work for character vector and factor vector.
+
+Use 'as.numeric'
+```{r}
+as.numeric(pull(p1_df, sample))
+as.numeric(pull(p1_df, sp_gt_0))
+as.numeric(pull(p1_df, char_vec))
+as.numeric(pull(p1_df, fact_vec))
+```
+The elements of logical vector and factor vector change to numerical number. The elements of character vector change to NA, because character variables have no obvious comparability. That's also why the mean doesn't work for it.
 
 ## Including Plots
 
