@@ -1,7 +1,9 @@
 ---
 title: "p8105_hw1_bg2715"
 author: "Baode Gao"
-output: html_document
+output:
+  md_document:
+    variant: markdown_github
 ---
 
 My solution of HW1 is shown below.
